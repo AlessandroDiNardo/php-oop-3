@@ -37,15 +37,14 @@ class Employee extends Person {
     // stipendio annuale
     public function getAnnualSalary() {
 
-        return $this -> salary->getAnnual();
+        return $this -> salary -> getAnnual();
     }
 
     // ffunzione per la stampa a schermo
     public function getHtml() {
 
-        $html = parent::getHtml();
-
-        return "<p>Salary: " . $this->salary->getAnnual() . "</p>"
-        . "<p>Hire Date: " . $this->hireDate . "</p>";
+        return parent::getHtml() 
+        ."<p>Salary: " . $this -> salary->getAnnual() . "</p>"
+        . "<p>Hire Date: " . $this -> hireDate . "</p>";
     }
 }

@@ -19,28 +19,28 @@
             <div class="person">
                 <?php
                     echo "<h2>PERSON</h2>";
-                    echo $person1->getHtml();
+                    echo $person1 -> getHtml();
                 ?>
             </div>
             
             <div class="manager">
                 <?php
                     echo "<h2>MANAGER</h2>";
-                    echo $manager1->getHtml();
+                    echo $manager1 -> getHtml();
                 ?>
             </div> 
             
             <div class="employee">
                 <?php
                     echo "<h2>EMPLOYEE</h2>";
-                    echo $employee1->getHtml();
+                    echo $employee1 -> getHtml();
                 ?>
             </div>
 
             <div class="SALARY">
                 <?php
                     echo "<h2>SALARY</h2>";
-                    echo $salary1->getHtml();
+                    echo $salary1 -> getHtml();
                 ?>
             </div>
         </div>

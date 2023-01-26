@@ -43,10 +43,9 @@ class Manager extends Person {
     // funzione epr la stampa a schermo
     public function getHtml() {
 
-        $html = parent::getHtml();
-
-        return "<p>Dividend: " . $this->dividend . "</p>"
-        ."<p>Bonus: " . $this->bonus . "</p>"
-        ."<p>Annual Income: " . $this->getAnnualIncome() . "</p>";
+        return parent::getHtml() 
+        . '<p>Dividend: ' . $this->dividend . '</p>'
+        . '<p>Bonus: ' . $this->bonus . '</p>'
+        . '<p>Annual Income: ' . $this->getAnnualIncome() . '</p>';
     }
 }
