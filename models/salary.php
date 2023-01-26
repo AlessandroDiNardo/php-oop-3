@@ -4,14 +4,14 @@
 class Salary {
 
     private $monthly;
-    private $hasThirteenth;
-    private $hasFourteenth;
+    private $thirteenth;
+    private $fourteenth;
 
-    public function __construct($monthly, $hasThirteenth, $hasFourteenth) {
+    public function __construct($monthly, $thirteenth, $fourteenth) {
 
         $this -> setMonthly($monthly);
-        $this -> setHasThirteenth($hasThirteenth);
-        $this -> setHasFourteenth($hasFourteenth);
+        $this -> setThirteenth($thirteenth);
+        $this -> setFourteenth($fourteenth);
     }
 
     // stipendio mensile
@@ -26,36 +26,36 @@ class Salary {
     }
 
     // tredicesima
-    public function getHasThirteenth() {
+    public function getThirteenth() {
 
-        return $this -> hasThirteenth;
+        return $this -> thirteenth;
     }
 
-    public function setHasThirteenth($hasThirteenth) {
+    public function setThirteenth($thirteenth) {
 
-        $this -> hasThirteenth = $hasThirteenth;
+        $this -> thirteenth = $thirteenth;
     }
 
     // quattordicesima
-    public function getHasFourteenth() {
+    public function getFourteenth() {
 
-        return $this -> hasFourteenth;
+        return $this -> fourteenth;
     }
 
-    public function setHasFourteenth($hasFourteenth) {
+    public function setFourteenth($fourteenth) {
 
-        $this -> hasFourteenth = $hasFourteenth;
+        $this -> fourteenth = $fourteenth;
     }
 
     // stipendio annuale
     public function getAnnual() {
 
         $annual = $this -> monthly * 12;
-        if ($this -> hasThirteenth) {
+        if ($this -> thirteenth) {
 
             $annual += $this -> monthly;
         }
-        if ($this -> hasFourteenth) {
+        if ($this -> fourteenth) {
 
             $annual += $this -> monthly;
         }
@@ -67,8 +67,8 @@ class Salary {
 
         return 
         '<p>Monthly salary: ' . $this -> monthly . '</p>' 
-        . '<p>Thirteenth salary: ' . ($this -> hasThirteenth ? 'yes' : 'no') . '</p>' 
-        . '<p>Fourteenth salary: ' . ($this -> hasFourteenth ? 'yes' : 'no') . '</p>' 
+        . '<p>thirteenth salary: ' . ($this -> thirteenth ? 'yes' : 'no') . '</p>' 
+        . '<p>fourteenth salary: ' . ($this -> fourteenth ? 'yes' : 'no') . '</p>' 
         . '<p>Annual salary: ' . $this -> getAnnual() . '</p>';
     }
 }
